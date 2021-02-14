@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE dataset SYSTEM "../database.dtd">
+<dataset>
+    <POST ID="[POST.ID]"
+          TITLE="[POST.TITLE]"
+          TEXT="[POST.TEXT]"
+          PERSON_ID="[POST.PERSON_ID]"
+    />
+</dataset>

@@ -1,0 +1,17 @@
+<!ELEMENT dataset (
+        PERSON*,
+        POST*)>
+
+        <!ELEMENT PERSON EMPTY>
+        <!ATTLIST PERSON
+                ID CDATA #REQUIRED
+                NAME CDATA #IMPLIED
+                >
+
+        <!ELEMENT POST EMPTY>
+        <!ATTLIST POST
+                ID CDATA #REQUIRED
+                TITLE CDATA #IMPLIED
+                TEXT CDATA #IMPLIED
+                PERSON_ID CDATA #REQUIRED
+                >

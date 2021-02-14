@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- To be able to clean the database, you have to make sure that the tables are in the correct order so the relations/foreign keys
+can be deleted -->
+<dataset>
+    <PERSON/>
+    <POST/>
+</dataset>

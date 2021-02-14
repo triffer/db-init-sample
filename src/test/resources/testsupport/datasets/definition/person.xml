@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE dataset SYSTEM "../database.dtd">
+<dataset>
+    <PERSON ID="[PERSON.ID]"
+          NAME="[PERSON.NAME]"
+    />
+</dataset>
