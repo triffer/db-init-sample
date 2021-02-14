@@ -7,5 +7,6 @@ CREATE TABLE post (
                         id BIGSERIAL PRIMARY KEY,
                         title VARCHAR(255),
                         text VARCHAR(255),
-                        user_id BIGSERIAL
+                        person_id  BIGSERIAL
+                            constraint person_fkey references person
 );

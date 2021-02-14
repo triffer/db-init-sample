@@ -2,22 +2,17 @@ package com.triffer.dbunit.repository.dbunit;
 
 import com.triffer.dbunit.model.Person;
 import com.triffer.dbunit.repository.PersonRepository;
-import com.triffer.dbunit.repository.sql.RepositoryIntegrationSqlScriptInitTest;
-import com.triffer.dbunit.testsupport.commands.CleanDb;
 import com.triffer.dbunit.testsupport.commands.CreatePerson;
 import com.triffer.dbunit.testsupport.commands.CreatePost;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.jdbc.Sql;
-import org.springframework.test.context.jdbc.SqlGroup;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.AFTER_TEST_METHOD;
-import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.BEFORE_TEST_METHOD;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class PersonRepositoryDbunitScriptInitTest extends RepositoryIntegrationDbunitInitTest {
+public class PersonRepositoryDbunitInitTest extends RepositoryDbUnitInitTest {
 
     @Autowired
     private PersonRepository sut;
@@ -39,9 +34,9 @@ public class PersonRepositoryDbunitScriptInitTest extends RepositoryIntegrationD
         assertFalse(result.isEmpty());
         assertEquals(1, result.size());
         assertEquals("a new Person", result.get(0).getName());
-        assertFalse(result.get(0).getPostSet().isEmpty());
-        assertEquals("a title", result.get(0).getPostSet().iterator().next().getTitle());
-        assertEquals("default text", result.get(0).getPostSet().iterator().next().getText());
+        assertFalse(result.get(0).getPosts().isEmpty());
+        assertEquals("a title", result.get(0).getPosts().iterator().next().getTitle());
+        assertEquals("default text", result.get(0).getPosts().iterator().next().getText());
     }
 
     @Test

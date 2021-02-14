@@ -3,18 +3,13 @@
  * Unauthorized copying of this file, via any medium is strictly prohibited. This
  * is proprietary and confidential.
  */
-package com.triffer.dbunit.repository.dbunit;
+package com.triffer.dbunit.testsupport;
 
-import com.triffer.dbunit.testsupport.RepositoryTest;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.context.ApplicationContextInitializer;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
-import org.springframework.test.context.support.TestPropertySourceUtils;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
@@ -22,7 +17,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Testcontainers
-public abstract class RepositoryIntegrationDbunitInitTest extends RepositoryTest {
+public abstract class RepositoryContainerTest {
 
     public static PostgreSQLContainer<?> postgreDBContainer = new PostgreSQLContainer<>("postgres:12");
 

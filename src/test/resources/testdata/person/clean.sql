@@ -1,2 +1,2 @@
-DELETE FROM post;
 DELETE FROM person;
+DELETE FROM post;

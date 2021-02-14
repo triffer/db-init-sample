@@ -27,5 +27,5 @@ public class Person {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_id")
-    private Set<Post> postSet = new HashSet<>();
+    private Set<Post> posts = new HashSet<>();
 }
